@@ -1,7 +1,7 @@
-package cc_D2007_R;
+package ccLib_D5_R;
 
-{$R *.res}
-{$ALIGN 8}
+{$R *.RES}
+{$ALIGN ON}
 {$ASSERTIONS OFF}
 {$BOOLEVAL OFF}
 {$DEBUGINFO OFF}
@@ -28,14 +28,11 @@ package cc_D2007_R;
 {$DEFINE RELEASE}
 
 requires
-  rtl,
-  vcl,
-  dbrtl;
+  Vcl50,
+  Vcldb50;
 
 contains
-  ElapsedTimer in 'elapsedtimer\ElapsedTimer.pas',
-  AppIdleWarn in 'idleclose\AppIdleWarn.pas' {fmAppIdleWarn},
-  CloseApplication in 'idleclose\CloseApplication.pas',
-  LayoutSaver in 'layoutsaver\LayoutSaver.pas';
+  AppIdleWarn in '..\..\source\idleclose\AppIdleWarn.pas' {fmAppIdleWarn},
+  CloseApplication in '..\..\source\idleclose\CloseApplication.pas';
 
 end.

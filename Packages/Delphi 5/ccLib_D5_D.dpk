@@ -1,7 +1,8 @@
-package cc_D2007_R;
+package ccLib_D5_D;
 
-{$R *.res}
-{$ALIGN 8}
+{$R *.RES}
+{$R '..\..\source\idleclose\CloseApplicationReg.dcr'}
+{$ALIGN ON}
 {$ASSERTIONS OFF}
 {$BOOLEVAL OFF}
 {$DEBUGINFO OFF}
@@ -23,19 +24,14 @@ package cc_D2007_R;
 {$MINENUMSIZE 1}
 {$IMAGEBASE $400000}
 {$DESCRIPTION 'Cornelius Concepts Components'}
-{$RUNONLY}
+{$DESIGNONLY}
 {$IMPLICITBUILD OFF}
 {$DEFINE RELEASE}
 
 requires
-  rtl,
-  vcl,
-  dbrtl;
+  ccLib_D5_R;
 
 contains
-  ElapsedTimer in 'elapsedtimer\ElapsedTimer.pas',
-  AppIdleWarn in 'idleclose\AppIdleWarn.pas' {fmAppIdleWarn},
-  CloseApplication in 'idleclose\CloseApplication.pas',
-  LayoutSaver in 'layoutsaver\LayoutSaver.pas';
+  CloseApplicationReg in '..\..\source\idleclose\CloseApplicationReg.pas';
 
 end.
